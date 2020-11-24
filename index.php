@@ -40,7 +40,7 @@
                              <h2 data-animation="fadeInUp animated" data-delay=".4s">Showing Movie / Theaters </h2>
                              <div class="header-btn second-header-btn" data-animation="fadeInUp animated" data-delay=".4s">
                                 <br>
-                                <a href="https://21cineplex.com/" target="_blank" class="btn"><i class="fas fa-vr-cardboard"></i> Now Showing</a>
+                                <a href="virtual_event/index.htm" class="btn"><i class="fas fa-vr-cardboard"></i> Virtual Tour</a>
                              </div>
                           </div>
                        </div>
