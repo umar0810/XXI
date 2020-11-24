@@ -2,22 +2,22 @@
     <div class="col-lg-2">
        <div class="user">
           <div class="title">
-             <img src="../img/event_avatar_3.png" alt="img">
-             <h5>Hiliniam Nelson</h5>
-             <p>CEO Samsung</p>
+             <img src="../img/honest thief.jpg" alt="img">
+             <h5>Honest Thief</h5>
+             <p>Action, Crime, Drama</p>
           </div>
           <ul>
-             <li><i class="fal fa-video"></i> Product Launching</li>
+             <li><i class="fal fa-video"></i> Playing At</li>
           </ul>
        </div>
     </div>
     <div class="col-lg-10">
        <div class="event-list-content fix">
           <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
-             <li><i class="far fa-clock"></i>  <?php echo date('H:i'); ?> - <?php echo ( (date('H') + 1) . ':' . date('i')); ?></li>
+             <h3> January 2020 </h3>
           </ul>
-          <h2>Galaxy Unpack August 2020</h2>
-          <p>In order to save time you have to break down the content strategy for the event or conference you are planning step by step. Creating this process from scratch will take the longest amount of time to build, but once you have content production foundation.</p>
+          <h2>Honest Thief</h2>
+        <font size="5">Tom (Liam Neeson) adalah seorang perampok bank yang ingin merubah hidupnya. Ia berniat menyerahkan diri kepada FBI dan menjalani hidup dengan jujur. Namun niat tulus Tom ternyata dimanfaatkan oleh dua agen yang ingin menguasai hasil rampokannya. Kini Tom berusaha membersihkan namanya, pasca ia dituduh melakukan pembunuhan.</font>
           <div class="crical"><i class="fa fa-microphone"></i> </div>
        </div>
     </div>

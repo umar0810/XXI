@@ -81,7 +81,7 @@
                <div class="row">
                   <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
                      <div class="breadcrumb-wrap text-center">
-                        <h1><font id="welcometag" style="display:none; color:#ffffff;">Welcome to <?php echo $_GET["roomname"]; ?></font>
+                        <h1><font id="welcometag" style="display:none; color:#ffffff;">Welcome to Cinema XXI</font>
                         </h1>
                         <h5 style="color:#ffffff;" id="welcometag2">
                            Hi <?php echo $_GET["name"]; ?>! <!-- <span id="copylink" class="badge badge-primary"><i class="fa fa-link" aria-hidden="true"></i></span> -->
@@ -93,13 +93,13 @@
                      </div>
                   </div>
                   <div class="col-lg-12 text-center" style="display:inline" id="join-webminar">
-                    <a class="btn btn-primary" role="button" href="./room.php?name=<?php echo $_GET["name"]; ?>&email=<?php echo $_GET["email"]; ?>&roomname=Webinar&lobby=true&room=44f59808-f378-4eed-bf0f-c5b13a919183">Join Webinar</a>
+                    <a class="btn btn-primary" role="button" href="./room.php?name=<?php echo $_GET["name"]; ?>&email=<?php echo $_GET["email"]; ?>&roomname=Webinar&lobby=true&room=44f59808-f378-4eed-bf0f-c5b13a919183">Watch Movie</a>
                   </div>
                    <div class="col-lg-12 text-center" style="display:none" id="join-music">
-                     <a class="btn btn-primary" role="button" href="./room.php?name=<?php echo $_GET["name"]; ?>&email=<?php echo $_GET["email"]; ?>&roomname=Live Music&lobby=true&room=e576908c-0b73-4a1c-ab3d-02a02fd74d92">Join Live Music</a>
+                     <a class="btn btn-primary" role="button" href="./room.php?name=<?php echo $_GET["name"]; ?>&email=<?php echo $_GET["email"]; ?>&roomname=Live Music&lobby=true&room=e576908c-0b73-4a1c-ab3d-02a02fd74d92">At Theaters</a>
                    </div>
                    <div class="col-lg-12 text-center" style="display:none" id="join-conference">
-                     <a class="btn btn-primary" role="button" href="./room.php?name=<?php echo $_GET["name"]; ?>&email=<?php echo $_GET["email"]; ?>&roomname=Ceremony&lobby=true&room=c170f800-b1bd-4a8e-b1a6-bbe495114718">Join Ceremony</a>
+                     <a class="btn btn-primary" role="button" href="./room.php?name=<?php echo $_GET["name"]; ?>&email=<?php echo $_GET["email"]; ?>&roomname=Ceremony&lobby=true&room=c170f800-b1bd-4a8e-b1a6-bbe495114718">XXI Cafe & Lounge</a>
                    </div>
                   <div class="col-lg-8 mb-40" id="lobbyhide1">
                     <?php
@@ -199,24 +199,24 @@
                                <img src="../img/t-icon.png" alt="img" class="drk-icon">
                                <img src="../img/t-w-icon1.png" alt="img" class="lgt-icon">
                                <div class="nav-content">
-                                  <strong>Webinar</strong>
-                                  <span><?php echo date("j F Y"); ?></span>
+                                 <strong>Now Playing</strong>
+								 <h5>Desember 2020</h5>
                                </div>
                             </a>
                             <a class="nav-item nav-link <?php if($_GET["room"]=="e576908c-0b73-4a1c-ab3d-02a02fd74d92"){echo 'active'; echo ' show'; }?>" id="nav-profile-tab" data-toggle="tab" href="./room.php?name=<?php echo $_GET["name"]; ?>&email=<?php echo $_GET["email"]; ?>&roomname=Live Music&lobby=true&room=e576908c-0b73-4a1c-ab3d-02a02fd74d92" role="tab" aria-selected="false">
                                <img src="../img/t-icon.png" alt="img" class="drk-icon">
                                <img src="../img/t-w-icon1.png" alt="img" class="lgt-icon">
                                <div class="nav-content">
-                                  <strong>Live Music</strong>
-                                  <span><?php echo date("j F Y"); ?></span>
+                                 <strong>Theaters</strong>
+								 <h5>Desember 2020</h5>
                                </div>
                             </a>
                             <a class="nav-item nav-link <?php if($_GET["room"]=="c170f800-b1bd-4a8e-b1a6-bbe495114718"){echo 'active'; echo ' show'; }?>" id="nav-contact-tab" data-toggle="tab" href="./room.php?name=<?php echo $_GET["name"]; ?>&email=<?php echo $_GET["email"]; ?>&roomname=Ceremony&lobby=true&room=c170f800-b1bd-4a8e-b1a6-bbe495114718" role="tab" aria-selected="false">
                                <img src="../img/t-icon.png" alt="img" class="drk-icon">
                                <img src="../img/t-w-icon1.png" alt="img" class="lgt-icon">
                                <div class="nav-content">
-                                  <strong>Ceremony</strong>
-                                  <span><?php echo date("j F Y"); ?></span>
+                                <strong>Up Coming</strong>
+								<h5>Desember 2020</h5>
                                </div>
                             </a>
                          </div>
@@ -282,24 +282,24 @@
                               <img src="../img/t-icon.png" alt="img" class="drk-icon">
                               <img src="../img/t-w-icon1.png" alt="img" class="lgt-icon">
                               <div class="nav-content">
-                                 <strong>Webinar</strong>
-                                 <span><?php echo date("j F Y"); ?></span>
+                                 <strong>Now Playing</strong>
+								 <h5>Desember 2020</h5>
                               </div>
                            </a>
                            <a class="nav-item nav-link" id="nav-profile-tab-lobby" data-toggle="tab" href="#" role="tab" aria-selected="false">
                               <img src="../img/t-icon.png" alt="img" class="drk-icon">
                               <img src="../img/t-w-icon1.png" alt="img" class="lgt-icon">
                               <div class="nav-content">
-                                 <strong>Live Music</strong>
-                                 <span><?php echo date("j F Y"); ?></span>
+                                 <strong>Theaters</strong>
+								 <h5>Desember 2020</h5>
                               </div>
                            </a>
                            <a class="nav-item nav-link" id="nav-contact-tab-lobby" data-toggle="tab" href="#" role="tab" aria-selected="false">
                               <img src="../img/t-icon.png" alt="img" class="drk-icon">
                               <img src="../img/t-w-icon1.png" alt="img" class="lgt-icon">
                               <div class="nav-content">
-                                 <strong>Ceremony</strong>
-                                 <span><?php echo date("j F Y"); ?></span>
+                                <strong>Up Coming</strong>
+								<h5>Desember 2020</h5>
                               </div>
                            </a>
                         </div>

@@ -201,7 +201,7 @@
 										<img src="../img/t-w-icon1.png" alt="img" class="lgt-icon">
 										<div class="nav-content">
 											 <strong>Now Playing</strong>
-											 <p>Desember 2020</p>
+											 <h5>Desember 2020</h5>
 										</div>
 									</a>
 									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#two" role="tab" aria-selected="false">
@@ -209,7 +209,7 @@
 										<img src="../img/t-w-icon1.png" alt="img" class="lgt-icon">
 										<div class="nav-content">
 											 <strong>Theaters</strong>
-											 <p>Desember 2020</p>
+											 <h5>Desember 2020</h5>
 										</div>
 									</a>
 									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#three" role="tab" aria-selected="false">
@@ -217,7 +217,7 @@
 										<img src="../img/t-w-icon1.png" alt="img" class="lgt-icon">
 										<div class="nav-content">
 											 <strong>Up Coming</strong>
-											 <p>Desember 2020</p>
+											 <h5>Desember 2020</h5>
 										</div>
 									</a>
 								</div>

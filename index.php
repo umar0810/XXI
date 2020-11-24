@@ -131,12 +131,12 @@ CINEMA 21 terus mengikuti perkembangan teknologi dengan melengkapi fasilitas-fas
 
           <section id="pricing" class="pricing-area pt-113 pb-90 fix" style="background-image:url(img/pricing_bg.jpg);background-size: cover;">
              <div class="section-t team-t paroller" data-paroller-factor="0.15" data-paroller-factor-lg="0.15" data-paroller-factor-md="0.15" data-paroller-factor-sm="0.15" data-paroller-type="foreground" data-paroller-direction="horizontal">
-                <h2>Plans</h2>
+                <h2>Movie</h2>
              </div>
              <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-8">
                    <div class="section-title text-center mb-80">
-                      <span class="wow fadeInUp animated" data-animation="fadeInUp animated" data-delay=".2s">Our plans</span>
+                      <span class="wow fadeInUp animated" data-animation="fadeInUp animated" data-delay=".2s">Now Showing</span>
                       <h2 class="wow fadeInUp animated" data-animation="fadeInUp animated" data-delay=".4s">Watch Your Movie</h2>
                    </div>
                 </div>
