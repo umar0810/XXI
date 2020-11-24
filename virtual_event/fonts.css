@@ -1,0 +1,30 @@
+@font-face {
+   font-family: "Segoe UI";
+   src: url("fonts/Segoe UI.eot") format("embedded-opentype"), url("fonts/Segoe UI.ttf") format("truetype"), url("fonts/Segoe UI.woff") format("woff"), url("fonts/Segoe UI.svg") format("svg");
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: "Segoe UI";
+   src: url("fonts/Segoe UI Bold.eot") format("embedded-opentype"), url("fonts/Segoe UI Bold.ttf") format("truetype"), url("fonts/Segoe UI Bold.woff") format("woff"), url("fonts/Segoe UI Bold.svg") format("svg");
+   font-weight: bold;
+   font-style: normal;
+}
+@font-face {
+   font-family: "Segoe UI";
+   src: url("fonts/Segoe UI Italic.eot") format("embedded-opentype"), url("fonts/Segoe UI Italic.ttf") format("truetype"), url("fonts/Segoe UI Italic.woff") format("woff"), url("fonts/Segoe UI Italic.svg") format("svg");
+   font-weight: normal;
+   font-style: italic;
+}
+@font-face {
+   font-family: "Segoe UI";
+   src: url("fonts/Segoe UI Bold Italic.eot") format("embedded-opentype"), url("fonts/Segoe UI Bold Italic.ttf") format("truetype"), url("fonts/Segoe UI Bold Italic.woff") format("woff"), url("fonts/Segoe UI Bold Italic.svg") format("svg");
+   font-weight: bold;
+   font-style: italic;
+}
+@font-face {
+   font-family: "FS Joey";
+   src: url("fonts/FSJoey-Bold.eot") format("embedded-opentype"), url("fonts/FSJoey-Bold.otf") format("opentype"), url("fonts/FSJoey-Bold.woff") format("woff");
+   font-weight: bold;
+   font-style: normal;
+}

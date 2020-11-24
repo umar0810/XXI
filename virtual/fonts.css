@@ -1,0 +1,6 @@
+@font-face {
+   font-family: "FS Joey";
+   src: url("fonts/FSJoey-Bold.eot") format("embedded-opentype"), url("fonts/FSJoey-Bold.otf") format("opentype"), url("fonts/FSJoey-Bold.woff") format("woff");
+   font-weight: bold;
+   font-style: normal;
+}

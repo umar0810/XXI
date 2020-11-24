@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- CSS JS BOOTSTRAP STUFF -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <!-- CSS JS BOOTSTRAP STUFF -->
+
+
+    <title>Live Stream</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/animate.min.css">
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+	<link rel="stylesheet" href="../fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="../css/dripicons.css">
+	<link rel="stylesheet" href="../css/slick.css">
+	<link rel="stylesheet" href="../css/default.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./assets/js/socket.io.js"></script>
+
+
+    <script type="text/javascript" src="./assets/js/index.js"></script>
+
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/enhancesdp.js"></script>
+    <style>
+        .showUserName{
+            font-size:20px;
+            color: #ff8400;
+            text-align: center;
+        }
+        .chat-body{
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;
+            background-color: #ffdedf;
+            margin-bottom:20px;
+        }
+        #chatRow {
+            box-shadow: 0 2px 5px 0 blueviolet,0 2px 10px 0 rgba(0,0,0,.12)!important
+        }
+    </style>
+
+</head>
+
+<body>
+<header id="home" class="header-area">
+	<div id="header-sticky" class="menu-area">
+		<div class="container">
+			<div class="second-menu">
+				<div class="row align-items-center">
+					<div class="col-xl-3 col-lg-3">
+						<div class="logo">
+							<a href="index.html"><img src="../img/logo/logo.png" alt="logo"></a>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-9">
+						<div class="responsive"><i class="icon dripicons-align-right"></i></div>
+						<div class="main-menu text-right text-xl-center">
+							<nav id="mobile-menu">
+								<ul>
+									<li class="has-sub">
+										<a href="../index.html">Home</a>
+										<!--<ul>
+											<li><a href="index.html">Home Page 01</a></li>
+											<li><a href="index2.html">Home Page 02</a></li>
+											<li><a href="index3.html">Home Page 03</a></li>
+										</ul>-->
+									</li>
+									<li class="has-sub">
+										<a href="../about.html">Speakers</a>
+									</li>
+									<!--<li class="has-sub">
+										<a href="../venue.html">Virtual Tour</a>
+									</li>-->
+									 <li class="has-sub">
+										<a href="index.html">Live Event</a>
+										<!--<ul>
+											<li><a href="speakers.html">Speakers Page</a></li>
+											<li><a href="speaker-details.html">Speakers Details</a></li>
+										</ul>-->
+									</li>
+									 <li class="has-sub">
+										<a href="../shop.html">Shop</a>
+										<!--<ul>
+											<li><a href="shop.html">Shop Page</a></li>
+											<li><a href="shop-details.html">Shop Details</a></li>
+										</ul>-->
+									 </li>
+									<!--<li><a href="blog.html">News</a></li>-->
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<!--<div class="col-xl-3 text-right d-none d-xl-block">
+						<div class="header-btn second-header-btn">
+							 <a href="contact.html" class="btn"><i class="far fa-ticket-alt"></i> Buy Ticket</a>
+						</div>
+					</div>-->
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<main>
+  <section id="parallax" class="slider-area breadcrumb-area d-flex align-items-center justify-content-center fix" style="background-image:url(../img/innerpage_bg_img.jpg)">
+	  <div class="slider-shape ss-one layer" data-depth="0.10"><img src="../img/doddle_6.png" alt="shape"></div>
+    <div class="slider-shape ss-three layer" data-depth="0.40"><img src="../img/doddle_9.png" alt="shape"></div>
+    <div class="slider-shape ss-four layer" data-depth="0.60"><img src="../img/doddle_7.png" alt="shape"></div>
+    <div class="container">
+      <div class="row">
+          <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+              <div class="breadcrumb-wrap text-center">
+                  <div class="breadcrumb-title mb-30">
+                      <h2>Live Event</h2>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <section class="inner-blog pt-120 pb-140" style="display:none;" id="conferenceRow">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8">
+                  <div class="bsingle__post mb-50 wow fadeInUp animated" data-animation="fadeInUp animated" data-delay=".2s">
+                      <div class="bsingle__post-thumb video-p">
+                          <video width="770" height="460" controls>
+                            <source src="../video/webminar.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                      </div>
+                      <div class="bsingle__content">
+                          <div class="meta-info">
+                              <ul>
+                                  <li><a href="#"><i class="far fa-user"></i>by Bill Gates</a></li>
+                              </ul>
+                          </div>
+                          <h2>The next outbreak? We’re not ready.</h2>
+                         <p>Coronaviruses are a group of related RNA viruses that cause diseases in mammals and birds. In humans and birds, they cause respiratory tract infections that can range from mild to lethal. Mild illnesses in humans include some cases of the common cold (which is also caused by other viruses, predominantly rhinoviruses), while more lethal varieties can cause SARS, MERS, and COVID-19. In cows and pigs they cause diarrhea, while in mice they cause hepatitis and encephalomyelitis. There are as yet no vaccines or antiviral drugs to prevent or treat human coronavirus infections.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4">
+                  <aside>
+                      <div class="widget mb-40">
+                        <div class="slidebar__form">
+                          <video id="localVideo" autoplay muted playsinline controls="false" style="max-width:352px; max-height:240px;"></video>
+                        </div>
+                      </div>
+                      <div class="widget mb-40">
+                          <div class="widget-title text-center">
+                              <h4>Live Chat</h4>
+                          </div>
+                          <div style="min-height:250px; max-height:250px; overflow-y: scroll;">
+                            <ul class="cat__list" id="chatArea" >
+                            </ul>
+                          </div>
+                          <br><br>
+                          <div class="slidebar__form">
+                              <form action="#">
+                                  <input id="message" type="text" placeholder="Search your keyword...">
+                                  <button id="sendMessage"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                              </form>
+                          </div>
+                      </div>
+                  </aside>
+              </div>
+          </div>
+          <div class="row" id="others">
+          </div>
+
+      </div>
+  </section>
+
+  <section class="inner-blog pt-120 pb-140" id="loginRow" style="display:inline;">
+
+      <br><br><br>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3"></div>
+              <div class="col-lg-6">
+                <div class="widget mb-40">
+                    <div class="widget-title text-center">
+                        <h4>Join To Live Event</h4>
+                    </div>
+                    <div class="slidebar__form">
+                        <form action="#">
+                            <input id="nickname" type="text" placeholder="Enter your name">
+    												<small id="nickHelp" class="form-text text-muted">Alphabet only.</small>
+                            <br><br>
+      											<a class="btn btn-lg btn-primary btn-block" type="submit" href="#" id="loginButton">Join</a>
+                        </form>
+                    </div>
+                </div>
+              </div>
+              <div class="col-lg-3"></div>
+          </div>
+      </div>
+  </section>
+
+  <div class="event fix pt-120 pb-120">
+			 <div class="section-t team-t paroller" data-paroller-factor="0.15" data-paroller-factor-lg="0.15" data-paroller-factor-md="0.15" data-paroller-factor-sm="0.15" data-paroller-type="foreground" data-paroller-direction="horizontal"><h2>Event</h2></div>
+			 <div class="row justify-content-center">
+                        <div class="col-xl-6 col-lg-8">
+                            <div class="section-title text-center mb-80">
+                                <span class="wow fadeInUp animated" data-animation="fadeInUp animated" data-delay=".2s">Event</span>
+                                <h2 class="wow fadeInUp animated" data-animation="fadeInUp animated" data-delay=".2s">Schedule</h2>
+                            </div>
+                        </div>
+                    </div>
+                <div class="container">
+				<div class="row">
+			   <div class="col-lg-12 ">
+                  <nav class="wow fadeInDown animated" data-animation="fadeInDown animated" data-delay=".2s">
+                     <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active show" id="nav-home-tab" data-toggle="tab" href="#one" role="tab" aria-selected="true">
+						<img src="../img/t-icon.png" alt="img" class="drk-icon">
+						<img src="../img/t-w-icon1.png" alt="img" class="lgt-icon">
+						<div class="nav-content">
+							<strong>First Stage</strong>
+							<span>10th January 2019</span>
+						</div>
+						</a>
+                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#two" role="tab" aria-selected="false"><img src="../img/t-icon.png" alt="img" class="drk-icon">
+						<img src="../img/t-w-icon1.png" alt="img" class="lgt-icon">
+						<div class="nav-content">
+							<strong>Second Stage</strong>
+							<span>10th January 2019</span>
+						</div>
+						</a>
+                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#three" role="tab" aria-selected="false"><img src="../img/t-icon.png" alt="img" class="drk-icon">
+						<img src="../img/t-w-icon1.png" alt="img" class="lgt-icon">
+						<div class="nav-content">
+							<strong>Third Stage</strong>
+							<span>10th January 2019</span>
+						</div>
+						</a>
+						<a class="nav-item nav-link" id="nav-contact-tab2" data-toggle="tab" href="#four" role="tab" aria-selected="false"><img src="../img/t-icon.png" alt="img" class="drk-icon">
+						<img src="../img/t-w-icon1.png" alt="img" class="lgt-icon">
+						<div class="nav-content">
+							<strong>Fourth Stage</strong>
+							<span>10th January 2019</span>
+						</div>
+						</a>
+                     </div>
+                  </nav>
+                  <div class="tab-content py-3 px-3 px-sm-0 wow fadeInDown animated" data-animation="fadeInDown animated" data-delay=".2s" id="nav-tabContent">
+                     <div class="tab-pane fade active show" id="one" role="tabpanel" aria-labelledby="nav-home-tab">
+						<!-- row loop -->
+                        <div class="row mb-30">
+                           <div class="col-lg-2">
+							  <div class="user">
+								  <div class="title">
+									  <img src="../img/event_avatar_1.png" alt="img">
+									 <h5>Rosalina William</h5>
+									 <p>UX Deisgn</p>
+								  </div>
+								  <ul>
+                                 <li><i class="fal fa-coffee"></i> Coffe & Snacks</li>
+                                 <li><i class="fal fa-video"></i> Video Streming</li>
+                              </ul>
+							  </div>
+                           </div>
+                           <div class="col-lg-10">
+                              <div class="event-list-content fix">
+                                 <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
+									<li><i class="fas fa-map-marker-alt"></i> Waterfront Hotel, London</li>
+									<li><i class="far fa-clock"></i> 9.30 - 10.30 AM</li>
+								 </ul>
+								 <h2>UX Design Trend Party 2019</h2>
+								 <p>In order to save time you have to break down the content strategy for the event or conference you are planning step by step. Creating this process from scratch will take the longest amount of time to build, but once you have content production foundation.</p>
+
+
+								 <div class="crical"><i class="fal fa-video"></i> </div>
+                              </div>
+                           </div>
+                        </div>
+						<!-- row loop -->
+						<!-- row loop -->
+                        <div class="row mb-30">
+                           <div class="col-lg-2">
+							  <div class="user">
+								  <div class="title">
+									  <img src="../img/event_avatar_2.png" alt="img">
+									 <h5>Kelian M. Bappe</h5>
+									 <p>youtubing</p>
+								  </div>
+								  <ul>
+                                 <li><i class="fal fa-coffee"></i> Coffe & Snacks</li>
+                                 <li><i class="fal fa-video"></i> Video Streming</li>
+                              </ul>
+							  </div>
+                           </div>
+                           <div class="col-lg-10">
+                              <div class="event-list-content fix">
+                                 <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
+									<li><i class="fas fa-map-marker-alt"></i> Waterfront Hotel, London</li>
+									<li><i class="far fa-clock"></i> 9.30 - 10.30 AM</li>
+								 </ul>
+								 <h2>Rokolo DJ Dancing 2019</h2>
+								 <p>In order to save time you have to break down the content strategy for the event or conference you are planning step by step. Creating this process from scratch will take the longest amount of time to build, but once you have content production foundation.</p>
+
+
+								 <div class="crical"><i class="fal fa-magic"></i> </div>
+                              </div>
+                           </div>
+                        </div>
+						<!-- row loop -->
+						<!-- row loop -->
+                        <div class="row mb-30">
+                           <div class="col-lg-2">
+							  <div class="user">
+								  <div class="title">
+									  <img src="../img/event_avatar_3.png" alt="img">
+									 <h5>Hiliniam Nelson</h5>
+									 <p>UX Deisgn</p>
+								  </div>
+								  <ul>
+                                 <li><i class="fal fa-coffee"></i> Coffe & Snacks</li>
+                                 <li><i class="fal fa-video"></i> Video Streming</li>
+                              </ul>
+							  </div>
+                           </div>
+                           <div class="col-lg-10">
+                              <div class="event-list-content fix">
+                                 <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
+									<li><i class="fas fa-map-marker-alt"></i> Waterfront Hotel, London</li>
+									<li><i class="far fa-clock"></i>  9.30 - 10.30 AM</li>
+								 </ul>
+								 <h2>Google Youtube Stratigic Party</h2>
+								 <p>In order to save time you have to break down the content strategy for the event or conference you are planning step by step. Creating this process from scratch will take the longest amount of time to build, but once you have content production foundation.</p>
+
+
+								 <div class="crical"><i class="far fa-cogs"></i> </div>
+                              </div>
+                           </div>
+                        </div>
+						<!-- row loop -->
+						<!-- row loop -->
+                        <div class="row mb-30">
+                           <div class="col-lg-2">
+							  <div class="user">
+								  <div class="title">
+									  <img src="../img/event_avatar_4.png" alt="img">
+									 <h5>Kimjing J. Jalim</h5>
+									 <p>UX Deisgn</p>
+								  </div>
+								  <ul>
+                                 <li><i class="fal fa-coffee"></i> Coffe & Snacks</li>
+                                 <li><i class="fal fa-video"></i> Video Streming</li>
+                              </ul>
+							  </div>
+                           </div>
+                           <div class="col-lg-10">
+                              <div class="event-list-content fix">
+                                 <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
+									<li><i class="fas fa-map-marker-alt"></i> Waterfront Hotel, London</li>
+									<li><i class="far fa-clock"></i>  9.30 - 10.30 AM</li>
+								 </ul>
+								 <h2>Intro Jiknim Jikis 2019</h2>
+								 <p>In order to save time you have to break down the content strategy for the event or conference you are planning step by step. Creating this process from scratch will take the longest amount of time to build, but once you have content production foundation.</p>
+
+
+								 <div class="crical"><i class="fal fa-ban"></i></div>
+                              </div>
+                           </div>
+                        </div>
+						<!-- row loop -->
+
+                     </div>
+                     <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <!-- row loop -->
+                        <div class="row mb-30">
+                           <div class="col-lg-2">
+							  <div class="user">
+								  <div class="title">
+									  <img src="../img/event_avatar_1.png" alt="img">
+									 <h5>Rosalina William</h5>
+									 <p>UX Deisgn</p>
+								  </div>
+								  <ul>
+                                 <li><i class="fal fa-coffee"></i> Coffe & Snacks</li>
+                                 <li><i class="fal fa-video"></i> Video Streming</li>
+                              </ul>
+							  </div>
+                           </div>
+                           <div class="col-lg-10">
+                              <div class="event-list-content fix">
+                                 <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
+									<li><i class="fas fa-map-marker-alt"></i> Waterfront Hotel, London</li>
+									<li><i class="far fa-clock"></i> 9.30 - 10.30 AM</li>
+								 </ul>
+								 <h2>UX Design Trend Party 2019</h2>
+								 <p>In order to save time you have to break down the content strategy for the event or conference you are planning step by step. Creating this process from scratch will take the longest amount of time to build, but once you have content production foundation.</p>
+
+
+								 <div class="crical"><i class="fal fa-video"></i> </div>
+                              </div>
+                           </div>
+                        </div>
+						<!-- row loop -->
+						<!-- row loop -->
+                        <div class="row mb-30">
+                           <div class="col-lg-2">
+							  <div class="user">
+								  <div class="title">
+									  <img src="../img/event_avatar_2.png" alt="img">
+									 <h5>Kelian M. Bappe</h5>
+									 <p>youtubing</p>
+								  </div>
+								  <ul>
+                                 <li><i class="fal fa-coffee"></i> Coffe & Snacks</li>
+                                 <li><i class="fal fa-video"></i> Video Streming</li>
+                              </ul>
+							  </div>
+                           </div>
+                           <div class="col-lg-10">
+                              <div class="event-list-content fix">
+                                 <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
+									<li><i class="fas fa-map-marker-alt"></i> Waterfront Hotel, London</li>
+									<li><i class="far fa-clock"></i> 9.30 - 10.30 AM</li>
+								 </ul>
+								 <h2>Rokolo DJ Dancing 2019</h2>
+								 <p>In order to save time you have to break down the content strategy for the event or conference you are planning step by step. Creating this process from scratch will take the longest amount of time to build, but once you have content production foundation.</p>
+
+
+								 <div class="crical"><i class="fal fa-video"></i> </div>
+                              </div>
+                           </div>
+                        </div>
+						<!-- row loop -->
+						<!-- row loop -->
+                        <div class="row mb-30">
+                           <div class="col-lg-2">
+							  <div class="user">
+								  <div class="title">
+									  <img src="../img/event_avatar_3.png" alt="img">
+									 <h5>Hiliniam Nelson</h5>
+									 <p>UX Deisgn</p>
+								  </div>
+								  <ul>
+                                 <li><i class="fal fa-coffee"></i> Coffe & Snacks</li>
+                                 <li><i class="fal fa-video"></i> Video Streming</li>
+                              </ul>
+							  </div>
+                           </div>
+                           <div class="col-lg-10">
+                              <div class="event-list-content fix">
+                                 <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
+									<li><i class="fas fa-map-marker-alt"></i> Waterfront Hotel, London</li>
+									<li><i class="far fa-clock"></i>  9.30 - 10.30 AM</li>
+								 </ul>
+								 <h2>Google Youtube Stratigic Party</h2>
+								 <p>In order to save time you have to break down the content strategy for the event or conference you are planning step by step. Creating this process from scratch will take the longest amount of time to build, but once you have content production foundation.</p>
+
+
+								 <div class="crical"><i class="fal fa-video"></i> </div>
+                              </div>
+                           </div>
+                        </div>
+						<!-- row loop -->
+						<!-- row loop -->
+                        <div class="row mb-30">
+                           <div class="col-lg-2">
+							  <div class="user">
+								  <div class="title">
+									  <img src="../img/event_avatar_4.png" alt="img">
+									 <h5>Kimjing J. Jalim</h5>
+									 <p>UX Deisgn</p>
+								  </div>
+								  <ul>
+                                 <li><i class="fal fa-coffee"></i> Coffe & Snacks</li>
+                                 <li><i class="fal fa-video"></i> Video Streming</li>
+                              </ul>
+							  </div>
+                           </div>
+                           <div class="col-lg-10">
+                              <div class="event-list-content fix">
+                                 <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
+									<li><i class="fas fa-map-marker-alt"></i> Waterfront Hotel, London</li>
+									<li><i class="far fa-clock"></i>  9.30 - 10.30 AM</li>
+								 </ul>
+								 <h2>Intro Jiknim Jikis 2019</h2>
+								 <p>In order to save time you have to break down the content strategy for the event or conference you are planning step by step. Creating this process from scratch will take the longest amount of time to build, but once you have content production foundation.</p>
+
+
+								 <div class="crical"><i class="fal fa-video"></i> </div>
+                              </div>
+                           </div>
+                        </div>
+						<!-- row loop -->
+                     </div>
+                     <div class="tab-pane fade" id="three" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <!-- row loop -->
+                        <div class="row mb-30">
+                           <div class="col-lg-2">
+							  <div class="user">
+								  <div class="title">
+									  <img src="../img/event_avatar_1.png" alt="img">
+									 <h5>Rosalina William</h5>
+									 <p>UX Deisgn</p>
+								  </div>
+								  <ul>
+                                 <li><i class="fal fa-coffee"></i> Coffe & Snacks</li>
+                                 <li><i class="fal fa-video"></i> Video Streming</li>
+                              </ul>
+							  </div>
+                           </div>
+                           <div class="col-lg-10">
+                              <div class="event-list-content fix">
+                                 <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
+									<li><i class="fas fa-map-marker-alt"></i> Waterfront Hotel, London</li>
+									<li><i class="far fa-clock"></i> 9.30 - 10.30 AM</li>
+								 </ul>
+								 <h2>UX Design Trend Party 2019</h2>
+								 <p>In order to save time you have to break down the content strategy for the event or conference you are planning step by step. Creating this process from scratch will take the longest amount of time to build, but once you have content production foundation.</p>
+
+
+								 <div class="crical"><i class="fal fa-video"></i> </div>
+                              </div>
+                           </div>
+                        </div>
+						<!-- row loop -->
+						<!-- row loop -->
+                        <div class="row mb-30">
+                           <div class="col-lg-2">
+							  <div class="user">
+								  <div class="title">
+									  <img src="../img/event_avatar_2.png" alt="img">
+									 <h5>Kelian M. Bappe</h5>
+									 <p>youtubing</p>
+								  </div>
+								  <ul>
+                                 <li><i class="fal fa-coffee"></i> Coffe & Snacks</li>
+                                 <li><i class="fal fa-video"></i> Video Streming</li>
+                              </ul>
+							  </div>
+                           </div>
+                           <div class="col-lg-10">
+                              <div class="event-list-content fix">
+                                 <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
+									<li><i class="fas fa-map-marker-alt"></i> Waterfront Hotel, London</li>
+									<li><i class="far fa-clock"></i> 9.30 - 10.30 AM</li>
+								 </ul>
+								 <h2>Rokolo DJ Dancing 2019</h2>
+								 <p>In order to save time you have to break down the content strategy for the event or conference you are planning step by step. Creating this process from scratch will take the longest amount of time to build, but once you have content production foundation.</p>
+
+
+								 <div class="crical"><i class="fal fa-video"></i> </div>
+                              </div>
+                           </div>
+                        </div>
+						<!-- row loop -->
+						<!-- row loop -->
+                        <div class="row mb-30">
+                           <div class="col-lg-2">
+							  <div class="user">
+								  <div class="title">
+									  <img src="../img/event_avatar_3.png" alt="img">
+									 <h5>Hiliniam Nelson</h5>
+									 <p>UX Deisgn</p>
+								  </div>
+								  <ul>
+                                 <li><i class="fal fa-coffee"></i> Coffe & Snacks</li>
+                                 <li><i class="fal fa-video"></i> Video Streming</li>
+                              </ul>
+							  </div>
+                           </div>
+                           <div class="col-lg-10">
+                              <div class="event-list-content fix">
+                                 <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
+									<li><i class="fas fa-map-marker-alt"></i> Waterfront Hotel, London</li>
+									<li><i class="far fa-clock"></i>  9.30 - 10.30 AM</li>
+								 </ul>
+								 <h2>Google Youtube Stratigic Party</h2>
+								 <p>In order to save time you have to break down the content strategy for the event or conference you are planning step by step. Creating this process from scratch will take the longest amount of time to build, but once you have content production foundation.</p>
+
+
+								 <div class="crical"><i class="fal fa-video"></i> </div>
+                              </div>
+                           </div>
+                        </div>
+						<!-- row loop -->
+						<!-- row loop -->
+                        <div class="row mb-30">
+                           <div class="col-lg-2">
+							  <div class="user">
+								  <div class="title">
+									  <img src="../img/event_avatar_4.png" alt="img">
+									 <h5>Kimjing J. Jalim</h5>
+									 <p>UX Deisgn</p>
+								  </div>
+								  <ul>
+                                 <li><i class="fal fa-coffee"></i> Coffe & Snacks</li>
+                                 <li><i class="fal fa-video"></i> Video Streming</li>
+                              </ul>
+							  </div>
+                           </div>
+                           <div class="col-lg-10">
+                              <div class="event-list-content fix">
+                                 <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
+									<li><i class="fas fa-map-marker-alt"></i> Waterfront Hotel, London</li>
+									<li><i class="far fa-clock"></i>  9.30 - 10.30 AM</li>
+								 </ul>
+								 <h2>Intro Jiknim Jikis 2019</h2>
+								 <p>In order to save time you have to break down the content strategy for the event or conference you are planning step by step. Creating this process from scratch will take the longest amount of time to build, but once you have content production foundation.</p>
+
+
+								 <div class="crical"><i class="fal fa-video"></i> </div>
+                              </div>
+                           </div>
+                        </div>
+						<!-- row loop -->
+                     </div>
+					 <div class="tab-pane fade" id="four" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <!-- row loop -->
+                        <div class="row mb-30">
+                           <div class="col-lg-2">
+							  <div class="user">
+								  <div class="title">
+									  <img src="../img/event_avatar_1.png" alt="img">
+									 <h5>Rosalina William</h5>
+									 <p>UX Deisgn</p>
+								  </div>
+								  <ul>
+                                 <li><i class="fal fa-coffee"></i> Coffe & Snacks</li>
+                                 <li><i class="fal fa-video"></i> Video Streming</li>
+                              </ul>
+							  </div>
+                           </div>
+                           <div class="col-lg-10">
+                              <div class="event-list-content fix">
+                                 <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
+									<li><i class="fas fa-map-marker-alt"></i> Waterfront Hotel, London</li>
+									<li><i class="far fa-clock"></i> 9.30 - 10.30 AM</li>
+								 </ul>
+								 <h2>UX Design Trend Party 2019</h2>
+								 <p>In order to save time you have to break down the content strategy for the event or conference you are planning step by step. Creating this process from scratch will take the longest amount of time to build, but once you have content production foundation.</p>
+
+
+								 <div class="crical"><i class="fal fa-video"></i> </div>
+                              </div>
+                           </div>
+                        </div>
+						<!-- row loop -->
+						<!-- row loop -->
+                        <div class="row mb-30">
+                           <div class="col-lg-2">
+							  <div class="user">
+								  <div class="title">
+									  <img src="../img/event_avatar_2.png" alt="img">
+									 <h5>Kelian M. Bappe</h5>
+									 <p>youtubing</p>
+								  </div>
+								  <ul>
+                                 <li><i class="fal fa-coffee"></i> Coffe & Snacks</li>
+                                 <li><i class="fal fa-video"></i> Video Streming</li>
+                              </ul>
+							  </div>
+                           </div>
+                           <div class="col-lg-10">
+                              <div class="event-list-content fix">
+                                 <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
+									<li><i class="fas fa-map-marker-alt"></i> Waterfront Hotel, London</li>
+									<li><i class="far fa-clock"></i> 9.30 - 10.30 AM</li>
+								 </ul>
+								 <h2>Rokolo DJ Dancing 2019</h2>
+								 <p>In order to save time you have to break down the content strategy for the event or conference you are planning step by step. Creating this process from scratch will take the longest amount of time to build, but once you have content production foundation.</p>
+
+
+								 <div class="crical"><i class="fal fa-video"></i> </div>
+                              </div>
+                           </div>
+                        </div>
+						<!-- row loop -->
+						<!-- row loop -->
+                        <div class="row mb-30">
+                           <div class="col-lg-2">
+							  <div class="user">
+								  <div class="title">
+									  <img src="../img/event_avatar_3.png" alt="img">
+									 <h5>Hiliniam Nelson</h5>
+									 <p>UX Deisgn</p>
+								  </div>
+								  <ul>
+                                 <li><i class="fal fa-coffee"></i> Coffe & Snacks</li>
+                                 <li><i class="fal fa-video"></i> Video Streming</li>
+                              </ul>
+							  </div>
+                           </div>
+                           <div class="col-lg-10">
+                              <div class="event-list-content fix">
+                                 <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
+									<li><i class="fas fa-map-marker-alt"></i> Waterfront Hotel, London</li>
+									<li><i class="far fa-clock"></i>  9.30 - 10.30 AM</li>
+								 </ul>
+								 <h2>Google Youtube Stratigic Party</h2>
+								 <p>In order to save time you have to break down the content strategy for the event or conference you are planning step by step. Creating this process from scratch will take the longest amount of time to build, but once you have content production foundation.</p>
+
+
+								 <div class="crical"><i class="fal fa-video"></i> </div>
+                              </div>
+                           </div>
+                        </div>
+						<!-- row loop -->
+						<!-- row loop -->
+                        <div class="row mb-30">
+                           <div class="col-lg-2">
+							  <div class="user">
+								  <div class="title">
+									  <img src="../img/event_avatar_4.png" alt="img">
+									 <h5>Kimjing J. Jalim</h5>
+									 <p>UX Deisgn</p>
+								  </div>
+								  <ul>
+                                 <li><i class="fal fa-coffee"></i> Coffe & Snacks</li>
+                                 <li><i class="fal fa-video"></i> Video Streming</li>
+                              </ul>
+							  </div>
+                           </div>
+                           <div class="col-lg-10">
+                              <div class="event-list-content fix">
+                                 <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
+									<li><i class="fas fa-map-marker-alt"></i> Waterfront Hotel, London</li>
+									<li><i class="far fa-clock"></i>  9.30 - 10.30 AM</li>
+								 </ul>
+								 <h2>Intro Jiknim Jikis 2019</h2>
+								 <p>In order to save time you have to break down the content strategy for the event or conference you are planning step by step. Creating this process from scratch will take the longest amount of time to build, but once you have content production foundation.</p>
+
+
+								 <div class="crical"><i class="fal fa-video"></i> </div>
+                              </div>
+                           </div>
+                        </div>
+						<!-- row loop -->
+                     </div>
+                  </div>
+               </div>
+			   <div class="col-lg-12 justify-content-center text-center">
+				<a href="#" class="btn mt-20 mr-10">More Program  +</a>
+			   </div>
+			   </div>
+            </div>
+            </div>
+
+</main>
+<footer class="footer-bg footer-p" style="background-image:url(../img/footer_bg_img.jpg);background-size: cover;">
+   <div class="footer-top">
+      <div class="container">
+         <div class="row justify-content-between">
+            <div class="col-xl-12 col-lg-12 col-sm-12 text-center">
+               <div class="footer-widget pt-120 mb-30">
+                  <div class="logo mb-35">
+                     <a href="#"><img src="../img/logo/logo.png" alt="logo"></a>
+                  </div>
+                  <div class="footer-text mb-20">
+                     <p>The issue with any content strategy is time. Time to sit down and think about what kind of content should be created, time to stop and write, or record, edit and publish, and time to engage with your audience to promote the content you created.</p>
+                  </div>
+                  <div class="footer-social">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-twitter"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="copyright-wrap pb-120">
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+               <div class="copyright-text text-center">
+                  <div class="footer-link">
+                     <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Eventime</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <!--<li><a href="#">Tickets</a></li>-->
+                        <li><a href="#">Venue</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+<!-- JS here -->
+        <script src="../js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="../js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="../js/popper.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/one-page-nav-min.js"></script>
+        <script src="../js/slick.min.js"></script>
+        <script src="../js/ajax-form.js"></script>
+        <script src="../js/paroller.js"></script>
+        <script src="../js/wow.min.js"></script>
+        <script src="../js/parallax.min.js"></script>
+        <script src="../js/jquery.waypoints.min.js"></script>
+        <script src="../js/jquery.countdown.min.js"></script>
+        <script src="../js/jquery.counterup.min.js"></script>
+        <script src="../js/jquery.scrollUp.min.js"></script>
+        <script src="../js/jquery.magnific-popup.min.js"></script>
+        <script src="../js/element-in-view.js"></script>
+		    <script src="../js/isotope.pkgd.min.js"></script>
+        <script src="../js/imagesloaded.pkgd.min.js"></script>
+        <script src="../js/main.js"></script>
+
+</body>
+
+
+</html>
+<div class="hideitnow" style="display:none;" width="200px">
+    <li><b>##user## : ##message##</li>
+</div>
+
+<script>
+
+    var socketIoConnectionUrl = "https://playbox.biz.id/";
+
+    $(function () {
+        // Connection
+        var socket = io.connect(socketIoConnectionUrl);
+
+
+        socket.on("message", function (response) {
+            switch (response.type) {
+                case "new_user_login":
+                    console.log(response.data + " has joined the room");
+                    playStream(response.data);
+                    break
+                case "user_left":
+                    console.log(response.data + " has left the room");
+                    closeStream(response.data);
+                    $("#" + response.data).parent().remove();
+                    break
+                case "get_user_list":
+                    console.log(" active users", response.data);
+                    for (var i = 0; i < response.data.length; i++) {
+                        if (response.data[i] != socket.nickname) {
+                            playStream(response.data[i]);
+                        }
+                    }
+                    break
+                case "get_message":
+                    console.log(response.data);
+                    let messageTemplate = $(".hideitnow").html();
+                    let changeTemplateWithValues = messageTemplate.replace("##user##",response.data.nickname).replace("##message##",response.data.message);
+                    $("#chatArea").append(changeTemplateWithValues);
+
+                    break;
+
+            }
+        });
+
+
+        $("#loginButton").click(function () {
+          console.log($("#nickname").val().length);
+
+          var letters = /^[A-Za-z]+$/;
+          if($("#nickname").val().match(letters))
+          {
+            if($("#nickname").val().length > 0)
+            {
+              socket.nickname = $("#nickname").val();
+              socket.room = "test";
+              socket.emit("login", {nickname: socket.nickname, room: socket.room});
+
+              socket.emit("getRoomClients");
+              console.log($("#nickname").val());
+              console.log(socket);
+              publishStream();
+
+              $("#loginRow").hide();
+              $("#conferenceRow").show();
+              $("#infoRow").show();
+              $("#chatRow").show();
+              $("#slider").hide();
+
+              $("#roomName").html(socket.room);
+
+              var x = document.getElementById("localVideo");
+
+              x.play();
+              //$("#loggedUserName").html(socket.nickname);
+            }
+            else
+            {
+              alert("Nama harus di isi!");
+            }
+          }
+          else
+          {
+            alert("Tidak boleh menggunakan karakter lain selain huruf.");
+          }
+
+        });
+
+        $("#sendMessage").click(function(){
+            event.preventDefault();
+            let message = $("#message").val();
+            socket.emit("sendMessage",message);
+			$("#message").val("");
+        });
+
+        function playStream(streamName) {
+            $("#others").append('<div style="padding:10px !important;  class="col-lg-4 col-md-6"><video id="' + streamName + '" autoplay playsinline  controls="false" style="max-width:352px; max-height:240px;"></video></div>');
+            setTimeout(function () {
+                startPlay(streamName);
+            }, 5000);
+        }
+
+        function publishStream() {
+            localUser = socket.nickname;
+            openCameraAndMicrophone();
+        }
+
+
+    });
+
+
+
+</script>

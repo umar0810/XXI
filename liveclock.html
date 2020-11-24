@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/liveclock.css">
+
+<script>
+function startTime() {
+  var month = ['Januari', 'Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+  var days = ['Minggu','Senin', 'Selasa','Rabu','Kamis','Jumat','Sabtu'];
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+
+  var mo = today.getMonth();
+  var date = today.getDate();
+  var day = today.getDay();
+  var ye = today.getFullYear();
+
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('date').innerHTML =
+  days[day]  + ", " + date + " " + month[mo] + " " + ye + "<br>";
+
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+
+</script>
+</head>
+
+<body onload="startTime()">
+
+<div id="date" class="date"></div>
+<div id="txt" class="clock">></div>
+</body>
+</html>
