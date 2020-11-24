@@ -49,8 +49,8 @@
                <div class="row justify-content-center">
                   <div class="col-xl-8 col-lg-10">
                      <div class="section-title text-center mb-80">
-                        <span>get in touch</span>
-                        <h2>Get Your Updates</h2>
+                        <span>watch your movie</span>
+                        <h2>Now Showing</h2>
                      </div>
                   </div>
                </div>
